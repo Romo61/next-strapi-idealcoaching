@@ -26,7 +26,7 @@ const Heading = ({ data }: HeadingProps) => {
 
   return (
     <div className="prose">
-      <div className="md:flex md:items-center md:justify-between">
+      <div className="md:flex md:justify-between md:items-center">
         <div className="flex-1 min-w-0">
           <div
             className={cx(
