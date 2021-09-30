@@ -14,7 +14,7 @@ interface IGradientHero {
     black_text: string
     colored_text: string
     content: string
-    title_color: IHeadingColorEnum
+    title_color: 'black' | 'orange' | 'green' | 'yellow' | 'blue' | 'red'
     seminarcard: {
       id: number
       category: string
