@@ -14,7 +14,7 @@ interface IGradientHero {
     black_text: string
     colored_text: string
     content: string
-    title_color: ITitleColorEnum
+    title_color: IHeadingColorEnum
     seminarcard: {
       id: number
       category: string
@@ -32,7 +32,7 @@ function GradientHero({ data }: IGradientHero): ReactElement {
 
   return (
     <div>
-      {console.log(data)}
+      {/*   {console.log(data)} */}
       <div>
         <pre>{JSON.stringify(data, null, 2)}</pre>
       </div>

@@ -13,7 +13,7 @@ import ImageSection from './sections/image-section'
 import DynamicRichText from './sections/dynamic-rich-text'
 import DangerousHTML from './sections/dangerous-html'
 import GradientHero from './sections/gradient-hero'
-
+import Heading from './sections/heading'
 // Map Strapi sections to section components
 const sectionComponents = {
   'sections.hero': Hero,
@@ -29,6 +29,7 @@ const sectionComponents = {
   'sections.image': ImageSection,
   'sections.dynamic-content': DynamicRichText,
   'sections.dangerous-html': DangerousHTML,
+  'elements.heading': Heading,
   'sections.gradient-hero': GradientHero,
 }
 
@@ -42,6 +43,9 @@ const Section = ({ sectionData }) => {
   }
 
   // Display the section
+  /*  {
+    console.log(sectionData)
+  } */
   return <SectionComponent data={sectionData} />
 }
 
@@ -73,6 +77,7 @@ const Sections = ({ sections, preview }) => {
       {/* Show a banner if preview mode is on */}
       {preview && <PreviewModeBanner />}
       {/* Show the actual sections */}
+
       {sections?.map((section) => (
         <Section
           sectionData={section}

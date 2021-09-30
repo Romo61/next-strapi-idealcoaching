@@ -23,12 +23,4 @@ export declare global {
     text: string
     newTab: boolean
   }
-
-  enum ITitleColorEnum {
-    'orange',
-    'green',
-    'yellow',
-    'blue',
-    'red',
-  }
 }

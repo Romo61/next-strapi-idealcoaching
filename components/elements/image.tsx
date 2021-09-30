@@ -18,7 +18,7 @@ const CustomImage = ({ media, className, width, height }: CustomImageProps) => {
         alt={media?.alternativeText || ''}
         title={media?.caption || ''}
         layout="intrinsic"
-        className={className}
+        className={`rounded ` + className}
         width={width || media?.width}
         height={height || media?.height}
       />
