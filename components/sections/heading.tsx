@@ -25,7 +25,7 @@ const Heading = ({ data }: HeadingProps) => {
   const { title, title_color, title_type } = data
 
   return (
-    <div className="prose">
+    <div>
       <div className="md:flex md:justify-between md:items-center">
         <div className="flex-1 min-w-0">
           <div

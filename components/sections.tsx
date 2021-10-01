@@ -29,7 +29,7 @@ const sectionComponents = {
   'sections.image': ImageSection,
   'sections.dynamic-content': DynamicRichText,
   'sections.dangerous-html': DangerousHTML,
-  'elements.heading': Heading,
+  'sections.heading': Heading,
   'sections.gradient-hero': GradientHero,
 }
 
@@ -43,9 +43,7 @@ const Section = ({ sectionData }) => {
   }
 
   // Display the section
-  /*  {
-    console.log(sectionData)
-  } */
+
   return <SectionComponent data={sectionData} />
 }
 
@@ -79,10 +77,13 @@ const Sections = ({ sections, preview }) => {
       {/* Show the actual sections */}
 
       {sections?.map((section) => (
-        <Section
-          sectionData={section}
-          key={`${section.__component}${section.id}`}
-        />
+        <div key={`${section.__component}${section.id}`}>
+          {/*  {console.log(section)} */}
+          <Section
+            sectionData={section}
+            key={`${section.__component}${section.id}`}
+          />
+        </div>
       ))}
     </div>
   )
