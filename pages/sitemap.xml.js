@@ -19,7 +19,9 @@ const createSitemap = (pages) => `<?xml version="1.0" encoding="UTF-8"?>
 
 class Sitemap extends React.Component {
   static async getInitialProps({ res }) {
-    const request = await fetch('https://cms.ideal-coaching.com/pages')
+    const request = await fetch(
+      'https://cms.ideal-coaching.com/pages?status=published'
+    )
     const pages = await request.json()
 
     res.setHeader('Content-Type', 'text/xml')
