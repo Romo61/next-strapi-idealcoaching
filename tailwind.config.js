@@ -10,6 +10,13 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      spacing: {
+        '35vh': '35vh',
+        '55vh': '55vh',
+        '65vh': '65vh',
+        '75vh': '75vh',
+        '85vh': '85vh',
+      },
       colors: {
         primary: colors.emerald,
         cyan: colors.cyan,
