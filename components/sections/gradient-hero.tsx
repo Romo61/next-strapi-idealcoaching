@@ -68,7 +68,7 @@ const SingleCard = ({
     <div
       key={id}
       onClick={() => setIsOpen(!isOpen)}
-      className="flex overflow-y-auto h-full flex-col rounded-lg shadow-lg"
+      className="flex overflow-y-auto flex-col h-full rounded-lg shadow-lg"
     >
       <Link href={url}>
         <a
@@ -90,7 +90,7 @@ const SingleCard = ({
                   <p className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500 text-md">
                     {category}
                   </p>
-                  <div className="hidden lg:block mt-2">
+                  <div className="hidden mt-2 lg:block">
                     <div>
                       <MarkdownRender>{text}</MarkdownRender>
                     </div>
