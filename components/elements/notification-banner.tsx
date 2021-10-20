@@ -1,6 +1,7 @@
 import MarkdownRender from 'utils/MarkdownRender'
 import classNames from 'classnames'
 import { MdClose } from 'react-icons/md'
+import Ticker from 'react-ticker'
 
 const NotificationBanner = ({ data: { text, type }, closeSelf }) => {
   if (text)
@@ -18,11 +19,22 @@ const NotificationBanner = ({ data: { text, type }, closeSelf }) => {
         )}
       >
         <div className="container flex flex-row justify-between items-center">
-          <div className="flex-1 text-white rich-text-banner">
-            <MarkdownRender>{text}</MarkdownRender>
+          <div className="flex-1">
+            <Ticker>
+              {({ index }) => (
+                <div>
+                  <MarkdownRender white>{text}</MarkdownRender>
+                  <p>{'         '} </p>
+                </div>
+              )}
+            </Ticker>
           </div>
-          <button onClick={closeSelf} className="flex-shrink-0 py-1 px-1">
-            <MdClose className="w-auto h-6" color="#fff" />
+          <button
+            onClick={closeSelf}
+            className="flex-shrink-0 py-1 px-1"
+            aria-label="Close Banner"
+          >
+            <MdClose className="w-auto h-6" color="#fff" aria-hidden="true" />
           </button>
         </div>
       </div>

@@ -22,26 +22,38 @@ const Navbar = ({ navbar }: NavbarProps) => {
   return (
     <>
       {/* The actual navbar */}
-      <nav className="py-6 border-b-2 border-gray-200 sm:py-2">
+      <nav className="py-6 border-b-2 bg-gradient-to-b from-gray-800 to-gray-700 shadow sm:py-2">
         <div className="container flex flex-row justify-between items-center">
           {/* Content aligned to the left */}
           <div className="flex flex-row items-center">
-            <Link href="/[[...slug]]" as="/">
-              <a>
-                <CustomImage
-                  media={navbar?.logo}
-                  className="object-contain w-auto h-8"
-                  width={64}
-                  height={64}
-                />
-              </a>
-            </Link>
+            <div className="flex flex-shrink-0 items-center">
+              <Link href="/[[...slug]]" as="/">
+                <a>
+                  <div className="grid grid-cols-1 justify-items-center rounded">
+                    <CustomImage
+                      media={navbar?.logo}
+                      className=" object-contain w-12 h-8 xl:h-12"
+                      width={73}
+                      height={45}
+                    />
+                  </div>
+                  <div className="grid grid-cols-1 grid-rows-2 my-auto ml-4">
+                    <span className="mx-auto font-bold text-white">
+                      IDEAL-COACHING
+                    </span>
+                    <span className="hidden text-sm text-gray-300 md:block">
+                      Information – Erkenntnis – Gestalten
+                    </span>
+                  </div>
+                </a>
+              </Link>
+            </div>
             {/* List of links on desktop */}
             <ul className="hidden flex-row gap-4 items-baseline ml-10 list-none md:flex">
               {navbar.links.map((navLink) => (
                 <li key={navLink.id}>
                   <CustomLink link={navLink}>
-                    <div className="py-1 px-2 hover:text-gray-900">
+                    <div className="inline-flex items-center px-1 pt-1 text-xs font-bold leading-5 text-gray-300 border-b-2 border-transparent transition duration-150 ease-in-out xl:text-sm hover:text-gray-500 hover:border-gray-300 focus:outline-none focus:text-gray-100 focus:border-gray-300">
                       {navLink?.text}
                     </div>
                   </CustomLink>
@@ -73,7 +85,7 @@ const Navbar = ({ navbar }: NavbarProps) => {
             onClick={() => setMobileMenuIsShown(true)}
             className="block p-1 md:hidden"
           >
-            <MdMenu className="w-auto h-8" />
+            <MdMenu className="w-auto h-8" color="#fff" />
           </button>
           {/* CTA button on desktop */}
           {navbar.button && (

@@ -36,6 +36,7 @@
     "react-icons": "^4.2.0",
     "react-markdown": "^5.0.3",
     "react-query": "^3.24.5",
+    "react-ticker": "^1.2.2",
     "rustywind": "^0.12.2",
     "slugify": "^1.6.0",
     "webpack": "^5.55.1",

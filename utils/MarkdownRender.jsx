@@ -6,7 +6,7 @@ import cx from 'classnames'
 
 import * as React from 'react'
 
-const MarkdownRender = ({ children }) => {
+const MarkdownRender = ({ children, ...props }) => {
   const customRender = {
     link: ({ href, children, title, ...props }) => {
       if (href.startsWith('#')) {
@@ -103,7 +103,9 @@ const MarkdownRender = ({ children }) => {
   return (
     <div>
       <ReactMarkdown
-        className="mx-auto break-words prose prose-xl"
+        className={cx('mx-auto break-words prose prose-xl', {
+          'text-white TEXT_WHITE': props?.white === true,
+        })}
         skipHtml={true}
         renderers={customRender}
       >
