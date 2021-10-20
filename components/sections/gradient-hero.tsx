@@ -81,8 +81,8 @@ const SingleCard = ({
             <CustomImage
               className="object-cover w-full h-96"
               media={image}
-              width={900}
-              height={600}
+              width={1000}
+              height={700}
             />
             <div className="absolute bottom-0 left-0 w-full">
               <div className="flex flex-col flex-1 justify-between py-2 px-6 mx-auto bg-white">
