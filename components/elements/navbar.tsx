@@ -22,7 +22,7 @@ const Navbar = ({ navbar }: NavbarProps) => {
   return (
     <>
       {/* The actual navbar */}
-      <nav className="py-6 border-b-2 bg-gradient-to-b from-gray-800 to-gray-700 shadow sm:py-2">
+      <nav className="py-6 bg-gradient-to-b from-gray-800 to-gray-700 border-b-2 shadow sm:py-2">
         <div className="container flex flex-row justify-between items-center">
           {/* Content aligned to the left */}
           <div className="flex flex-row items-center">
@@ -32,7 +32,7 @@ const Navbar = ({ navbar }: NavbarProps) => {
                   <div className="grid grid-cols-1 justify-items-center rounded">
                     <CustomImage
                       media={navbar?.logo}
-                      className=" object-contain w-12 h-8 xl:h-12"
+                      className="object-contain w-12 h-8 xl:h-12"
                       width={73}
                       height={45}
                     />
@@ -53,7 +53,7 @@ const Navbar = ({ navbar }: NavbarProps) => {
               {navbar.links.map((navLink) => (
                 <li key={navLink.id}>
                   <CustomLink link={navLink}>
-                    <div className="inline-flex items-center px-1 pt-1 text-xs font-bold leading-5 text-gray-300 border-b-2 border-transparent transition duration-150 ease-in-out xl:text-sm hover:text-gray-500 hover:border-gray-300 focus:outline-none focus:text-gray-100 focus:border-gray-300">
+                    <div className="inline-flex items-center px-1 pt-1 text-xs font-bold leading-5 text-gray-300 border-b-2 border-transparent transition duration-150 ease-in-out xl:text-sm hover:text-gray-500 hover:border-gray-300 focus:text-gray-100 focus:border-gray-300 focus:outline-none">
                       {navLink?.text}
                     </div>
                   </CustomLink>

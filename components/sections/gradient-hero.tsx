@@ -126,7 +126,7 @@ function GradientHero({ data }: GradientHero): ReactElement {
                 <MarkdownRender>{data.content}</MarkdownRender>
               </div>
 
-              <div className="grid grid-cols-1 gap-3 mx-auto mt-12 max-w-lg lg:grid-cols-2 lg:max-w-none">
+              <div className="grid grid-cols-1 gap-3 mx-auto mt-12 max-w-lg lg:grid-cols-1 lg:max-w-none">
                 {data.seminarcard?.map((node) => (
                   <div key={node.id}>
                     {/* {JSON.stringify(node, null, 2)} */}
