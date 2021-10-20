@@ -103,7 +103,7 @@ const MarkdownRender = ({ children, ...props }) => {
   return (
     <div>
       <ReactMarkdown
-        className={cx('mx-auto break-words prose prose-xl', {
+        className={cx('mx-auto break-words prose prose-lg', {
           'text-white TEXT_WHITE': props?.white === true,
         })}
         skipHtml={true}
