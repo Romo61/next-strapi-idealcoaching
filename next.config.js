@@ -621,6 +621,68 @@ const nextConfig = {
         destination: ' /',
         permanent: true,
       },
+
+      {
+        source: '/seminare/seminare.html',
+        destination: ' /',
+        permanent: true,
+      },
+      {
+        source: '/Impressum/impressum.html',
+        destination: ' /',
+        permanent: true,
+      },
+      {
+        source: '/.well-known/apple-app-site-association',
+        destination: ' /',
+        permanent: true,
+      },
+      {
+        source: '/apple-app-site-association',
+        destination: ' /',
+        permanent: true,
+      },
+      {
+        source: '/tag/entscheidungsvorlage',
+        destination: ' /',
+        permanent: true,
+      },
+      {
+        source: '/html/kontakt.html',
+        destination: ' /',
+        permanent: true,
+      },
+
+      {
+        source: '/tag/terminplanung',
+        destination: ' /',
+        permanent: true,
+      },
+      {
+        source: '/about__trashed/experts-team',
+        destination: ' /',
+        permanent: true,
+      },
+      {
+        source: '/category/seminare',
+        destination: ' /',
+        permanent: true,
+      },
+      {
+        source: '/html/nonverbales.html',
+        destination: ' /',
+        permanent: true,
+      },
+      {
+        source: '/category/beratung',
+        destination: ' /',
+        permanent: true,
+      },
+      {
+        source: '/menschenkenntnis',
+        destination: ' /',
+        permanent: true,
+      },
     ]
   },
 
