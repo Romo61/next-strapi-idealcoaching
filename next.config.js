@@ -687,7 +687,7 @@ const nextConfig = {
   },
 
   webpack: (config, { dev, isServer }) => {
-    /* if (!dev && !isServer) {
+    if (!dev && !isServer) {
       config.plugins.push(
         new RelativeCiAgentWebpackPlugin({
           stats: { excludeAssets: [/stats.json/] },
@@ -698,7 +698,7 @@ const nextConfig = {
           'react-dom/test-utils': 'preact/test-utils',
           'react-dom': 'preact/compat',
         })
-    } */
+    }
     config.plugins.push(
       new StatsWriterPlugin({
         filename: 'stats.json',
